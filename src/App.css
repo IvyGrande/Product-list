@@ -1,0 +1,222 @@
+
+.header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header .start img{
+  height: 45px;
+}
+.header .logo img{
+  height: 140px;
+  margin-right: 20px;
+}
+
+.body{
+  background-color: rgb(240, 242, 245);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.listModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  height: 200px;
+  width: 415px;
+  background-color: white;
+}
+
+.listModal .listContent{
+  display: flex;
+  flex-direction: row;
+}
+
+.listModal .listContent img{
+  border-radius: 50%;
+  height: 50px;
+  margin: 20px 0px 0px 20px;
+}
+
+.listModal .listContent .list-text{
+  height: 140px;
+  /*background-color: green;*/
+  margin: 10px 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+.listModal .listContent .list-text .list-text-header{
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.listModal .listContent .list-text >p{
+  display: block;
+  text-overflow: ellipsis;
+  height: 30px;
+}
+
+.listModal .editPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listModal .editPart .edit {
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: #efefef 1px solid;
+}
+.listModal .editPart .editRight {
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right:#efefef 1px solid;
+  border-top: #efefef 1px solid;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 200px;
+  width: 415px;
+  background-color: white;
+
+}
+
+.addPage {
+  margin-left: 500px;
+  height: 450px;
+  width: 700px;
+  background-color: white;
+  position: fixed;
+  border: #efefef 10px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.addPage active{
+  opacity: 0;
+}
+.addPage .head{
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-weight: bold;
+  height: 60px;
+  border-bottom: #efefef 1px solid;
+}
+
+.addPage .textBlock{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 180px;
+}
+
+.addPage .textBlock input{
+  border: #efefef 1px solid;
+  width: 300px;
+  height: 30px;
+}
+
+.addPage .bottom{
+  border-top: #efefef 1px solid;
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+}
+.addPage .bottom button{
+  height: 40px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border-radius: 2px;
+  border: 1px gray solid;
+  background-color: white;
+}
+
+.addPage .bottom button:hover{
+  border-radius: 2px;
+  color: white;
+  background-color: rgb(84,145,240);
+  border-color: rgb(84,145,240);
+}
+.deleteAlert{
+  margin-left:600px;
+  height: 170px;
+  width: 430px;
+  background-color: white;
+  position: fixed;
+  border: #efefef 10px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+.deleteAlert .confirm{
+  width: 400px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.deleteAlert img{
+  height: 36px;
+  width: 45px;
+}
+.deleteAlert P{
+  margin-left: 50px;
+}
+.deleteAlert .bottom{
+  height: 50px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+}
+.deleteAlert .bottom button{
+
+  height: 40px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border-radius: 2px;
+  border: 1px #ababab solid;
+  background-color: white;
+
+}
+.deleteAlert .bottom button:hover{
+  border-radius: 2px;
+  color: white;
+  background-color: rgb(84,145,240);
+  border-color: rgb(84,145,240);
+}
+
+
+
+
