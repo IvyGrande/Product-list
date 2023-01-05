@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import "../../App.css"
-import productData from "../../data/ProductData";
 
 export const ProductModal = (props) => {
     return (

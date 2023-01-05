@@ -6,30 +6,17 @@ import {Modal} from "../common/Modal";
 import {DeleteAlert} from "../common/DeleteAlert";
 
 
-
 export const ProductPage = () => {
     const [showAddPage, setShowAddPage] = useState(false);
     const [product, setProduct] = useState(productData);
     const [showDeleteAlert, setShowDeleteAlert] = useState(false);
     const [showEditPage, setShowEditPage] = useState(false);
-    // const [input,setInput] = useState({id:"",url:"",name:"",introduction:""})
-    const [url, setUrl] = useState("");
-    const [name, setName] = useState("");
-    const [introduction, setIntroduction] = useState("");
 
-    const handleClick = () => {
-        console.log(url)
-        console.log(name)
-        console.log(introduction)
-        setProduct(current => [...current, {id: `${productData.length + 1}`, url, name, introduction}])
-console.log(product)
-    }
-
-    const deleteConfirm = (product,id) => {
+    const deleteConfirm = (product, id) => {
         setShowDeleteAlert(false)
         console.log(id)
         setProduct(prevProduct => {
-            prevProduct.filter(item => item.id !== id)
+                prevProduct.filter(item => item.id !== id)
                 // return [...prevProduct, prevProduct.splice(id - 1, 1)]
             }
             // [...current.slice(0, )]
@@ -60,39 +47,31 @@ console.log(product)
         }
     )
 
-    // const  handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const { username, password } = this;
-    //     alert('avatar url ：' + url + 'product name ：' + name + 'desc :' + introduction)
-    // }
-    const saveUrl = (e) => {
-        setUrl(e.target.value)
-        console.log(e.target.value)
+
+    const getStateFromModal = (state) =>{
+        setShowAddPage(state)
     }
 
-    const saveName = (e) => {
-        setName(e.target.value)
+    const getNewProduct = (newProduct,state) =>{
+        setProduct([...product,newProduct])
+        console.log(newProduct)
+        setShowAddPage(state)
     }
 
-    const saveIntroduction = (e) => {
-        setIntroduction(e.target.value)
-    }
     return (
         <div className="body">
             <div className="add" onClick={() => {
                 setShowAddPage(true)
-            }}>新增产品
+            }}>
+                新增产品
             </div>
-            {showAddPage ?
+            {showAddPage &&
                 <Modal
-                    saveUrl={saveUrl}
-                    saveName={saveName}
-                    saveIntroduction={saveIntroduction}
-                    setShowAddPage={setShowAddPage}
-                    handleClick={handleClick}
+                    addNewProduct={getNewProduct}
+                    cancel={getStateFromModal}
                     modalName="Add page"
                 />
-                : null}
+            }
             {showDeleteAlert ?
                 <DeleteAlert
                     setShowDeleteAlert={setShowDeleteAlert}
@@ -101,16 +80,7 @@ console.log(product)
                 />
                 : null
             }
-            {showEditPage ?
-                <Modal
-                    modalName="Edit page"
-                    saveUrl={saveUrl}
-                    saveName={saveName}
-                    saveIntroduction={saveIntroduction}
-                    url={product.url}
-                    setShowEditPage={setShowEditPage}
-                />
-                : null}
+
             {productModal}
         </div>
     )
