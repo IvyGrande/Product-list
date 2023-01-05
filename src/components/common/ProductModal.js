@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "../../App.css"
 
 export const ProductModal = (props) => {
@@ -16,7 +16,7 @@ export const ProductModal = (props) => {
             </div>
             <div className="editPart">
                 <div className="editRight" onClick={() => props.edit(props.id)}>编辑</div>
-                <div className="edit" onClick={() => props.deleteProduct(props.id)}>删除</div>
+                <div className="delete" onClick={() => props.deleteProduct(props.id)}>删除</div>
             </div>
 
 

@@ -28,11 +28,11 @@ export const ProductPage = () => {
 
     }
 
-    const edit = (id) => {
-        setShowEditPage(true)
-        console.log(product.url)
-
-    }
+    // const edit = (id) => {
+    //     setShowEditPage(true)
+    //     console.log(product.url)
+    //
+    // }
 
     const productModal = product.map(
         item => {
@@ -40,7 +40,7 @@ export const ProductPage = () => {
                 <ProductModal
                     key={item.id}
                     list={item}
-                    edit={edit}
+                    edit={()=>{}}
                     deleteProduct={handleClickDelete}
                 />
             )
@@ -54,7 +54,7 @@ export const ProductPage = () => {
 
     const getNewProduct = (newProduct,state) =>{
         setProduct([...product,newProduct])
-        console.log(newProduct)
+        console.log(product)
         setShowAddPage(state)
     }
 
@@ -67,6 +67,7 @@ export const ProductPage = () => {
             </div>
             {showAddPage &&
                 <Modal
+                    url={""}
                     addNewProduct={getNewProduct}
                     cancel={getStateFromModal}
                     modalName="Add page"
@@ -79,6 +80,13 @@ export const ProductPage = () => {
                     id={product.id}
                 />
                 : null
+            }
+            {showEditPage &&
+                <Modal
+                    addNewProduct={getNewProduct}
+                    cancel={getStateFromModal}
+                    modalName="Edit page"
+                />
             }
 
             {productModal}

@@ -3,11 +3,10 @@ import "../../App.css"
 import uuid from 'react-uuid';
 
 export const Modal = (props) => {
-    console.log(props.isShow);
-    const [url, setUrl] = useState("");
+    const [url, setUrl] = useState(props.url);
     const [name, setName] = useState("");
     const [introduction, setIntroduction] = useState("");
-
+    console.log(url);
     const handleUrlChange = (e) => {
         setUrl(e.target.value)
     };
