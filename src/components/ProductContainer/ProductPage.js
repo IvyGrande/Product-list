@@ -14,7 +14,6 @@ export const ProductPage = () => {
 
     const editProduct = (id) => {
         setShowEditPage(true)
-
         setSelectedId(id)
         console.log(id)
         let editedProduct = product.find(product =>

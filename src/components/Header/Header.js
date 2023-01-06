@@ -13,7 +13,6 @@ export const Header = () => {
             <div className="logo">
                 <img src="/logo.png" alt=""/>
             </div>
-
         </div>
     )
 }

@@ -5,8 +5,8 @@ import uuid from 'react-uuid';
 export const Modal = (props) => {
     const [url, setUrl] = useState(props.url);
     const [name, setName] = useState(props.name);
-    const [introduction, setIntroduction] = useState("");
-    console.log(url);
+    const [introduction, setIntroduction] = useState(props.introduction);
+
     const handleUrlChange = (e) => {
         setUrl(e.target.value)
     };
@@ -20,15 +20,13 @@ export const Modal = (props) => {
     };
 
     const cancel = () => {
-    //    要传的文字 msg:"false"
         props.cancel(false)
     }
 
     const save = () => {
-        const newProduct = {id:uuid(), url, name, introduction}
-        props.addNewProduct(newProduct,false)
+        const newProduct = {id: uuid(), url, name, introduction}
+        props.addNewProduct(newProduct, false, props.id)
     }
-
 
     return (
         <div className="addPage">
