@@ -20,7 +20,7 @@ export const DeleteAlert = (props) => {
                 <p>Are you sure you want to delete this product?</p>
             </div>
             <div className="bottom">
-                <button onClick={cancelDeleteItem}>Cancel</button>
+                <button data-testid="delete-cancel" onClick={cancelDeleteItem}>Cancel</button>
                 <button onClick={deleteConfirm}>Confirm</button>
             </div>
         </div>
