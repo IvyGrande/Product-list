@@ -13,12 +13,21 @@ describe('deleteAlert component', () => {
         expect(wrapper.find('.bottom').length).toBe(1);
     });
 
-    it('simulates click events', () => {
+    it('simulates click cancel events', () => {
         const cancelDeleteItemMock = jest.fn();
         const wrapper = shallow(<DeleteAlert cancelDeleteItem={cancelDeleteItemMock} />);
         const cancelBtn = wrapper.find('button').at(0);
 
         cancelBtn.simulate('click');
         expect(cancelDeleteItemMock).toHaveBeenCalled();
+    });
+
+    it('simulates click confirm events', () => {
+        const cancelConfirmItemMock = jest.fn();
+        const wrapper = shallow(<DeleteAlert deleteConfirm={cancelConfirmItemMock} />);
+        const confirmBtn = wrapper.find('button').at(1);
+
+        confirmBtn.simulate('click');
+        expect(cancelConfirmItemMock).toHaveBeenCalled();
     });
 })
