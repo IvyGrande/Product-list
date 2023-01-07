@@ -1,15 +1,13 @@
 import './App.css';
-import {Header} from "./components/Header/Header";
-import {ProductPage} from "./components/ProductContainer/ProductPage";
-// import {Modal} from "./components/common/Modal";
+import {Route, Routes} from "react-router-dom";
+import {HomePage} from "./components/HomePage";
 
 
 function App() {
     return (
-        <div>
-            <Header/>
-            <ProductPage/>
-        </div>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+        </Routes>
     )
 }
 

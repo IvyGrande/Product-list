@@ -61,6 +61,10 @@ export const ProductPage = () => {
         setShowEditPage(state)
     }
 
+    const addPage= () => {
+        setShowModalPage(true)
+    }
+
     const getNewProduct = (newProduct, state) => {
         setProduct([...product, newProduct])
         console.log(product)
@@ -75,9 +79,7 @@ export const ProductPage = () => {
 
     return (
         <div className="body">
-            <div className="add" onClick={() => {
-                setShowModalPage(true)
-            }}>
+            <div className="add" onClick={addPage}>
                 新增产品
             </div>
             {showModalPage &&
