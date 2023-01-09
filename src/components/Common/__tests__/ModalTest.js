@@ -1,5 +1,4 @@
 import Enzyme, {mount, shallow} from 'enzyme'
-import sinon from 'sinon';
 import Adapter from '@cfaester/enzyme-adapter-react-18';
 import {Modal} from "../Modal";
 

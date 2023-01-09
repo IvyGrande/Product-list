@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import {ProductModal} from "../common/ProductModal";
+import {ProductModal} from "../Common/ProductModal";
 import productData from "../../data/ProductData";
-import {Modal} from "../common/Modal";
-import {DeleteAlert} from "../common/DeleteAlert";
+import {Modal} from "../Common/Modal";
+import {DeleteAlert} from "../Common/DeleteAlert";
 
 export const ProductPage = () => {
     const [showModalPage, setShowModalPage] = useState(false);
@@ -55,13 +55,12 @@ export const ProductPage = () => {
         }
     )
 
-
     const getStateFromModal = (state) => {
         setShowModalPage(state)
         setShowEditPage(state)
     }
 
-    const addPage= () => {
+    const addPage = () => {
         setShowModalPage(true)
     }
 

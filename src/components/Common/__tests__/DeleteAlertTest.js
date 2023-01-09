@@ -1,7 +1,5 @@
 import Enzyme, {shallow} from 'enzyme'
-import sinon from 'sinon';
 import Adapter from '@cfaester/enzyme-adapter-react-18';
-
 import {DeleteAlert} from "../DeleteAlert";
 
 Enzyme.configure({ adapter: new Adapter() })
